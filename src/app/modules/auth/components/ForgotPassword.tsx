@@ -6,6 +6,7 @@ import MailOutlineWhite from '../../../../_badapp/assets/svg/MailOutlineWhite'
 import { ForgotPasswordFormData } from '../validators/ForgotPasswordData'
 import DevilHeadOutlineGradient from '../../../../_badapp/assets/svg/DevilHeadOutlineGradient'
 import { GradientButton } from '../../../../_badapp/particals'
+import Title from '../../../../_badapp/particals/content/Title'
 
 export function ForgotPassword() {
   const [loading, setLoading] = useState(false)
@@ -26,6 +27,7 @@ export function ForgotPassword() {
 
   return (
     <div className='bg-black'>
+      <Title src='' title='Badapp | Forgot-password' />
       <div>
         <div className='flex  flex-col justify-center max-w-lg relative w-full min-h-screen m-auto pt-12 pb-16 px-4 '>
           <picture>

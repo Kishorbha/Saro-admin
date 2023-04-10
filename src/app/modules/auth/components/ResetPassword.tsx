@@ -6,6 +6,7 @@ import InputField from '../../../../_badapp/particals/content/form/InputField.co
 import HeartLockOutlineWhite from '../../../../_badapp/assets/svg/HeartLockOutlineWhite'
 import DevilHeadOutlineGradient from '../../../../_badapp/assets/svg/DevilHeadOutlineGradient'
 import { GradientButton } from '../../../../_badapp/particals'
+import Title from '../../../../_badapp/particals/content/Title'
 
 export default function ResetPassword() {
   const [loading, setLoading] = useState(false)
@@ -26,6 +27,7 @@ export default function ResetPassword() {
 
   return (
     <div className='bg-black'>
+      <Title src='' title='Badapp | Reset-password' />
       <div>
         <div className='flex  flex-col justify-center max-w-lg relative w-full min-h-screen m-auto pt-12 pb-16 px-4 '>
           <picture>

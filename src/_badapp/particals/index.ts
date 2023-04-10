@@ -1,4 +1,5 @@
 export * from './content/link/Href'
+export * from './content/Title'
 
 // button
 export * from './content/button/GradientButton'

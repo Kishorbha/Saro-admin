@@ -5,6 +5,7 @@ import { Controller, useForm } from 'react-hook-form'
 import { CodeInput, GradientButton } from '../../../../_badapp/particals'
 import Countdown from 'react-countdown'
 import DevilHeadOutlineGradient from '../../../../_badapp/assets/svg/DevilHeadOutlineGradient'
+import Title from '../../../../_badapp/particals/content/Title'
 
 export default function VerityOtp() {
   const [loading, setLoading] = useState(false)
@@ -25,6 +26,7 @@ export default function VerityOtp() {
 
   return (
     <div className='bg-black'>
+      <Title src='' title='Badapp | Verity-otp' />
       <div>
         <div className='flex  flex-col justify-center max-w-lg relative w-full min-h-screen m-auto pt-12 pb-16 px-4 '>
           <picture>

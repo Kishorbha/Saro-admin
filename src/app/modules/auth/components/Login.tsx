@@ -8,6 +8,7 @@ import { LoginFormData } from '../validators/LoginFormData'
 import MailOutlineWhite from '../../../../_badapp/assets/svg/MailOutlineWhite'
 import { GradientButton, Href } from '../../../../_badapp/particals'
 import InputField from '../../../../_badapp/particals/content/form/InputField.component'
+import Title from '../../../../_badapp/particals/content/Title'
 
 export function Login() {
   const { control, handleSubmit } = useForm<LoginFormData>({
@@ -26,6 +27,7 @@ export function Login() {
 
   return (
     <div className='bg-black'>
+      <Title src='' title='Badapp | Login' />
       <div>
         <div className='flex  flex-col justify-center max-w-lg relative w-full min-h-screen m-auto pt-12 pb-16 px-4 '>
           <picture>
