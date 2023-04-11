@@ -29,7 +29,7 @@ const GradientButton: React.FC<ButtonProps> = ({
     >
       <button
         {...props}
-        className={`rounded-full px-5  font-bold w-full h-full select-none ${outlineVariant} ${filledVariant} ${
+        className={`rounded-full px-5 uppercase font-bold w-full h-full select-none ${outlineVariant} ${filledVariant} ${
           loading && 'cursor-not-allowed'
         } ${props.className}`}
         type={type || 'button'}

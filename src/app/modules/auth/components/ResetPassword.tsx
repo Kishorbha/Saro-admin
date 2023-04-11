@@ -5,9 +5,11 @@ import { classValidatorResolver } from '@hookform/resolvers/class-validator'
 import InputField from '../../../../_badapp/particals/content/form/InputField.component'
 import HeartLockOutlineWhite from '../../../../_badapp/assets/svg/HeartLockOutlineWhite'
 import DevilHeadOutlineGradient from '../../../../_badapp/assets/svg/DevilHeadOutlineGradient'
-import { GradientButton } from '../../../../_badapp/particals'
+import { GradientButton, Title } from '../../../../_badapp/particals'
+import { useIntl } from 'react-intl'
 
 export default function ResetPassword() {
+  const intl = useIntl()
   const [loading, setLoading] = useState(false)
   const { control, handleSubmit } = useForm<ResetPasswordData>({
     resolver: classValidatorResolver(ResetPasswordData),
@@ -26,7 +28,13 @@ export default function ResetPassword() {
 
   return (
     <div className='bg-black'>
-      {/* <Title src='' title='Badapp | Reset-password' /> */}
+      <Title
+        src=''
+        title={intl.formatMessage({
+          id: 'TITLE.RESET_PASSWORD',
+        })}
+      />
+
       <div>
         <div className='flex  flex-col justify-center max-w-lg relative w-full min-h-screen m-auto pt-12 pb-16 px-4 '>
           <picture>
@@ -45,7 +53,9 @@ export default function ResetPassword() {
                   errorMsg={error?.message}
                   onChange={(e) => field.onChange(e.currentTarget.value)}
                   className='mt-6 w-full'
-                  placeholder={'Password'}
+                  placeholder={intl.formatMessage({
+                    id: 'AUTH.INPUT.PASSWORD',
+                  })}
                   leftElement={<HeartLockOutlineWhite className='w-6 h-6' />}
                 />
               )}
@@ -59,13 +69,17 @@ export default function ResetPassword() {
                   errorMsg={error?.message}
                   onChange={(e) => field.onChange(e.currentTarget.value)}
                   className='mt-6 w-full'
-                  placeholder={'Confirm Password'}
+                  placeholder={intl.formatMessage({
+                    id: 'AUTH.INPUT.CONFIRM_PASSWORD',
+                  })}
                   leftElement={<HeartLockOutlineWhite className='w-6 h-6' />}
                 />
               )}
             />
             <GradientButton loading={loading} type='submit' variant='filled'>
-              RESET PASSWORD
+              {intl.formatMessage({
+                id: 'AUTH.RESET_PASSWORD.BUTTON',
+              })}
             </GradientButton>
           </form>
         </div>

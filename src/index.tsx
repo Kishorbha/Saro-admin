@@ -3,11 +3,14 @@ import ReactDOM from 'react-dom/client'
 import './_badapp/assets/index.css'
 import reportWebVitals from './reportWebVitals'
 import App from './app/App'
+import { BadappI18nProvider } from './_badapp/i18n/Badapp18n'
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
-    <App />
+    <BadappI18nProvider>
+      <App />
+    </BadappI18nProvider>
   </React.StrictMode>
 )
 

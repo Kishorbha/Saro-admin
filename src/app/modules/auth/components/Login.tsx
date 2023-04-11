@@ -1,5 +1,6 @@
 import { Controller, useForm } from 'react-hook-form'
 import { ChangeEvent } from 'react'
+import { useIntl } from 'react-intl'
 
 import HeartLockOutlineWhite from '../../../../_badapp/assets/svg/HeartLockOutlineWhite'
 import { classValidatorResolver } from '@hookform/resolvers/class-validator'
@@ -10,6 +11,7 @@ import { GradientButton, Href, Title } from '../../../../_badapp/particals'
 import InputField from '../../../../_badapp/particals/content/form/InputField.component'
 
 export function Login() {
+  const intl = useIntl()
   const { control, handleSubmit } = useForm<LoginFormData>({
     resolver: classValidatorResolver(LoginFormData),
     reValidateMode: 'onChange',
@@ -26,7 +28,12 @@ export function Login() {
 
   return (
     <div className='bg-black'>
-      <Title src='' title='Badapp | Login' />
+      <Title
+        src=''
+        title={intl.formatMessage({
+          id: 'TITLE.LOGIN',
+        })}
+      />
       <div>
         <div className='flex  flex-col justify-center max-w-lg relative w-full min-h-screen m-auto pt-12 pb-16 px-4 '>
           <picture>
@@ -46,7 +53,9 @@ export function Login() {
                     type='text'
                     errorMsg={error?.message}
                     className='mt-8 w-full'
-                    placeholder={'Email'}
+                    placeholder={intl.formatMessage({
+                      id: 'AUTH.INPUT.EMAIL',
+                    })}
                     leftElement={<MailOutlineWhite className='w-6 h-6 ' />}
                     onChange={(e: ChangeEvent<HTMLInputElement>) =>
                       field.onChange(e.currentTarget.value)
@@ -65,7 +74,9 @@ export function Login() {
                       field.onChange(e.target.value)
                     }
                     className='mt-6 w-full'
-                    placeholder={'Password'}
+                    placeholder={intl.formatMessage({
+                      id: 'AUTH.INPUT.PASSWORD',
+                    })}
                     leftElement={<HeartLockOutlineWhite className='w-6 h-6' />}
                   />
                 )}
@@ -75,11 +86,11 @@ export function Login() {
                 href='/auth/forgot-password'
                 className='text-white block w-max text-xs ml-auto  hover:underline'
               >
-                Forgot Password ?
+                {intl.formatMessage({ id: 'AUTH.FORGOT.TITLE' })}
               </Href>
             </div>
             <GradientButton type='submit' variant='filled'>
-              LOGIN
+              {intl.formatMessage({ id: 'AUTH.LOGIN.BUTTON' })}
             </GradientButton>
           </form>
         </div>

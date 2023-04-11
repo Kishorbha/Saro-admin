@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@formatjs/intl-pluralrules": "^4.0.28",
+    "@formatjs/intl-relativetimeformat": "^9.1.7",
     "@hookform/resolvers": "^3.0.1",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
@@ -22,6 +24,7 @@
     "react-hook-form": "^7.43.9",
     "react-hot-toast": "^2.4.0",
     "react-icons": "^4.8.0",
+    "react-intl": "^5.20.4",
     "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
     "typescript": "^4.4.2",

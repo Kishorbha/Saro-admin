@@ -5,6 +5,7 @@ import { Controller, useForm } from 'react-hook-form'
 import { CodeInput, GradientButton, Title } from '../../../../_badapp/particals'
 import Countdown from 'react-countdown'
 import DevilHeadOutlineGradient from '../../../../_badapp/assets/svg/DevilHeadOutlineGradient'
+import { useIntl } from 'react-intl'
 
 export default function VerityOtp() {
   const [loading, setLoading] = useState(false)
@@ -17,6 +18,7 @@ export default function VerityOtp() {
     },
   })
   const time = Date.now()
+  const intl = useIntl()
 
   const onSubmit = (values: ResetPasswordOTPData) => {
     setLoading(true)
@@ -25,7 +27,12 @@ export default function VerityOtp() {
 
   return (
     <div className='bg-black'>
-      <Title src='' title='Badapp | Verity-otp' />
+      <Title
+        src=''
+        title={intl.formatMessage({
+          id: 'TITLE.VERIFY_OTP',
+        })}
+      />
       <div>
         <div className='flex  flex-col justify-center max-w-lg relative w-full min-h-screen m-auto pt-12 pb-16 px-4 '>
           <picture>
@@ -54,7 +61,9 @@ export default function VerityOtp() {
                       disabled={loading}
                       className='text-white text-sm font-bold hover:bg-gray-800 px-4 py-2 '
                     >
-                      Resend OTP
+                      {intl.formatMessage({
+                        id: 'AUTH.GENERAL.RESEND_OTP',
+                      })}
                     </button>
                   ) : (
                     <span className='text-md font-bold px-4 py-2 border border-gray-800 text-white'>
@@ -66,7 +75,9 @@ export default function VerityOtp() {
             </div>
 
             <GradientButton loading={loading} type='submit' variant='filled'>
-              Verify OTP
+              {intl.formatMessage({
+                id: 'AUTH.GENERAL.VERIFY_OTP',
+              })}
             </GradientButton>
           </form>
         </div>
