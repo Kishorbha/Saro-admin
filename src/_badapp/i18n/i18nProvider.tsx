@@ -8,12 +8,7 @@ import '@formatjs/intl-relativetimeformat/locale-data/fr'
 import '@formatjs/intl-relativetimeformat/locale-data/ja'
 import '@formatjs/intl-relativetimeformat/locale-data/zh'
 
-import deMessages from './messages/de.json'
 import enMessages from './messages/en.json'
-import esMessages from './messages/es.json'
-import frMessages from './messages/fr.json'
-import jaMessages from './messages/ja.json'
-import zhMessages from './messages/zh.json'
 import npMessages from './messages/np.json'
 
 type Props = {
@@ -21,12 +16,7 @@ type Props = {
 }
 
 const allMessages = {
-  de: deMessages,
   en: enMessages,
-  es: esMessages,
-  fr: frMessages,
-  ja: jaMessages,
-  zh: zhMessages,
   np: npMessages,
 }
 
