@@ -33,6 +33,7 @@ const InputField: React.FC<InputType> = ({
         </div>
         <input
           {...props}
+          autoComplete=''
           type={show ? 'text' : type}
           className='w-full outline-none bg-primary-default py-3 placeholder:text-white '
         />

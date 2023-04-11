@@ -6,9 +6,8 @@ import { classValidatorResolver } from '@hookform/resolvers/class-validator'
 import DevilHeadOutlineGradient from '../../../../_badapp/assets/svg/DevilHeadOutlineGradient'
 import { LoginFormData } from '../validators/LoginFormData'
 import MailOutlineWhite from '../../../../_badapp/assets/svg/MailOutlineWhite'
-import { GradientButton, Href } from '../../../../_badapp/particals'
+import { GradientButton, Href, Title } from '../../../../_badapp/particals'
 import InputField from '../../../../_badapp/particals/content/form/InputField.component'
-import Title from '../../../../_badapp/particals/content/Title'
 
 export function Login() {
   const { control, handleSubmit } = useForm<LoginFormData>({

@@ -5,8 +5,7 @@ import InputField from '../../../../_badapp/particals/content/form/InputField.co
 import MailOutlineWhite from '../../../../_badapp/assets/svg/MailOutlineWhite'
 import { ForgotPasswordFormData } from '../validators/ForgotPasswordData'
 import DevilHeadOutlineGradient from '../../../../_badapp/assets/svg/DevilHeadOutlineGradient'
-import { GradientButton } from '../../../../_badapp/particals'
-import Title from '../../../../_badapp/particals/content/Title'
+import { GradientButton, Title } from '../../../../_badapp/particals'
 
 export function ForgotPassword() {
   const [loading, setLoading] = useState(false)

@@ -2,10 +2,9 @@ import { classValidatorResolver } from '@hookform/resolvers/class-validator'
 import { ResetPasswordOTPData } from '../validators/ResetPasswordData'
 import { useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
-import { CodeInput, GradientButton } from '../../../../_badapp/particals'
+import { CodeInput, GradientButton, Title } from '../../../../_badapp/particals'
 import Countdown from 'react-countdown'
 import DevilHeadOutlineGradient from '../../../../_badapp/assets/svg/DevilHeadOutlineGradient'
-import Title from '../../../../_badapp/particals/content/Title'
 
 export default function VerityOtp() {
   const [loading, setLoading] = useState(false)
