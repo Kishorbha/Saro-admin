@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { classValidatorResolver } from '@hookform/resolvers/class-validator'
 import { Controller, useForm } from 'react-hook-form'
-import InputField from '../../../../_badapp/particals/content/form/InputField.component'
-import MailOutlineWhite from '../../../../_badapp/assets/svg/MailOutlineWhite'
+import InputField from '../../../../_saro/particals/content/form/InputField.component'
+import MailOutlineWhite from '../../../../_saro/assets/svg/MailOutlineWhite'
 import { ForgotPasswordFormData } from '../validators/ForgotPasswordData'
-import DevilHeadOutlineGradient from '../../../../_badapp/assets/svg/DevilHeadOutlineGradient'
-import { GradientButton, Title } from '../../../../_badapp/particals'
+import DevilHeadOutlineGradient from '../../../../_saro/assets/svg/DevilHeadOutlineGradient'
+import { GradientButton, Title } from '../../../../_saro/particals'
 import { useIntl } from 'react-intl'
 
 export function ForgotPassword() {

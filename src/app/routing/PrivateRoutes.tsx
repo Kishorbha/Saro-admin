@@ -1,8 +1,16 @@
-import { FC } from 'react'
-import App from '../App'
+import { Navigate, Route, Routes } from 'react-router-dom'
+import { MasterLayout } from '../../_saro/layout/MasterLayout'
+import { DashboardWrapper } from '../pages/dashboard/DashboardWrapper'
 
-const AppRoutes: FC = () => {
-  return <App />
+const PrivateRoutes = () => {
+  return (
+    <Routes>
+      <Route element={<MasterLayout />}>
+        <Route path='auth/*' element={<Navigate to='/dashboard' />} />
+        <Route path='dashboard' element={<DashboardWrapper />} />
+      </Route>
+    </Routes>
+  )
 }
 
-export { AppRoutes }
+export { PrivateRoutes }

@@ -24,7 +24,6 @@ function getConfig(): Props {
   return initialState
 }
 
-// Side effect
 export function setLanguage(lang: string) {
   localStorage.setItem(I18N_CONFIG_KEY, JSON.stringify({ selectedLang: lang }))
   window.location.reload()
@@ -36,9 +35,9 @@ const useLang = () => {
   return useContext(I18nContext).selectedLang
 }
 
-const BadappI18nProvider = ({ children }: ChildrenProps) => {
+const SaroI18nProvider = ({ children }: ChildrenProps) => {
   const lang = getConfig()
   return <I18nContext.Provider value={lang}>{children}</I18nContext.Provider>
 }
 
-export { BadappI18nProvider, useLang }
+export { SaroI18nProvider, useLang }

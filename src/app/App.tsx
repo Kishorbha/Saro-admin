@@ -1,12 +1,20 @@
 import React, { Suspense } from 'react'
-import { AppRoutes } from './routing/AppRoutes'
-import { I18nProvider } from '../_badapp/i18n/i18nProvider'
+import { I18nProvider } from '../_saro/i18n/i18nProvider'
+import { LayoutProvider, LayoutSplashScreen } from '../_saro/layout/core'
+import { AuthInit } from './modules/auth'
+import { Outlet } from 'react-router-dom'
+import { MasterInit } from '../_saro/layout/MasterInit'
 
 function App() {
   return (
-    <Suspense>
+    <Suspense fallback={<LayoutSplashScreen />}>
       <I18nProvider>
-        <AppRoutes />
+        <LayoutProvider>
+          <AuthInit>
+            <Outlet />
+            <MasterInit />
+          </AuthInit>
+        </LayoutProvider>
       </I18nProvider>
     </Suspense>
   )

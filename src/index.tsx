@@ -1,16 +1,24 @@
 import React from 'react'
+import axios from 'axios'
 import ReactDOM from 'react-dom/client'
-import './_badapp/assets/index.css'
+import './_saro/assets/index.css'
 import reportWebVitals from './reportWebVitals'
-import App from './app/App'
-import { BadappI18nProvider } from './_badapp/i18n/Badapp18n'
+import { SaroI18nProvider } from './_saro/i18n/Saroi18n'
+import { ThemeProvider } from '@material-tailwind/react'
+import { AuthProvider, setupAxios } from './app/modules/auth'
+import { AppRoutes } from './app/routing/AppRoutes'
 
+setupAxios(axios)
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <React.StrictMode>
-    <BadappI18nProvider>
-      <App />
-    </BadappI18nProvider>
+    <ThemeProvider>
+      <SaroI18nProvider>
+        <AuthProvider>
+          <AppRoutes />
+        </AuthProvider>
+      </SaroI18nProvider>
+    </ThemeProvider>
   </React.StrictMode>
 )
 

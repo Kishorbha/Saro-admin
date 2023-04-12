@@ -1,4 +1,4 @@
-import { useLang } from './Badapp18n'
+import { useLang } from './Saroi18n'
 import { IntlProvider } from 'react-intl'
 import '@formatjs/intl-relativetimeformat/polyfill'
 import '@formatjs/intl-relativetimeformat/locale-data/en'

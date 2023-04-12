@@ -2,9 +2,9 @@ import { classValidatorResolver } from '@hookform/resolvers/class-validator'
 import { ResetPasswordOTPData } from '../validators/ResetPasswordData'
 import { useState } from 'react'
 import { Controller, useForm } from 'react-hook-form'
-import { CodeInput, GradientButton, Title } from '../../../../_badapp/particals'
+import { CodeInput, GradientButton, Title } from '../../../../_saro/particals'
 import Countdown from 'react-countdown'
-import DevilHeadOutlineGradient from '../../../../_badapp/assets/svg/DevilHeadOutlineGradient'
+import DevilHeadOutlineGradient from '../../../../_saro/assets/svg/DevilHeadOutlineGradient'
 import { useIntl } from 'react-intl'
 
 export default function VerityOtp() {
